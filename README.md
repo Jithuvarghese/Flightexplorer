@@ -26,10 +26,10 @@ Flight Explorer is a React + Vite web app for browsing live flight data, filteri
 
 ## Environment Setup
 
-Create a local env file from the example and set your Aviationstack key.
+Create a local `.env` file and set your Aviationstack key.
 
 ```bash
-cp .env.example .env
+touch .env
 ```
 
 Add values to `.env`:
@@ -38,6 +38,8 @@ Add values to `.env`:
 VITE_API_BASE_URL=https://api.aviationstack.com
 VITE_AVIATIONSTACK_API_KEY=your_api_key_here
 ```
+
+If you deploy to Vercel, add the same `VITE_AVIATIONSTACK_API_KEY` value in the project Environment Variables settings and redeploy. Do not leave it blank in `vercel.json`, because Vite reads `VITE_*` values at build time.
 
 ## Run Locally
 
